@@ -1,0 +1,2998 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./luck.png" type="image/png">
+    <title>Sorteio</title>
+
+    <script>
+
+        function loaded() {
+
+            // CÓDIGO PARA ESTILIZAÇÃO
+
+            const borderStyle = function (x) {
+
+                return {
+                    this: x,
+                    onMouseOn: function (y) {
+                        return this.style.backgroundColor = "#B9B7BD"
+                    },
+                    onMouseClose: function (y) {
+                        return this.style.backgroundColor = "#EBE7D0"
+                    },
+                    borderBottomOn: function (y) {
+                        return this.style.borderColor = "#EBE7D0"
+                    },
+                    borderBottomOff: function (y) {
+                        return this.style.borderColor = "#32CD30"
+                    }
+                }
+            }
+
+            let a = [borderStyle(this)]
+            let p = a[0]
+
+            let back = document.getElementById("back")
+            back.onmouseover = p.borderBottomOn
+            back.onmouseout = p.borderBottomOff
+
+            let h2 = document.getElementById("h2")
+            h2.onmouseover = p.borderBottomOn
+            h2.onmouseout = p.borderBottomOff
+
+            let input1 = document.getElementById("i1")
+            input1.onmouseover = p.onMouseOn
+            input1.onmouseout = p.onMouseClose
+
+            let input2 = document.getElementById("i2")
+            input2.onmouseover = p.onMouseOn
+            input2.onmouseout = p.onMouseClose
+
+            let input3 = document.getElementById("i3")
+            input3.onmouseover = p.onMouseOn
+            input3.onmouseout = p.onMouseClose
+
+            let input4 = document.getElementById("i4")
+            input4.onmouseover = p.onMouseOn
+            input4.onmouseout = p.onMouseClose
+
+            let input5 = document.getElementById("i5")
+            input5.onmouseover = p.onMouseOn
+            input5.onmouseout = p.onMouseClose
+
+            let input6 = document.getElementById("i6")
+            input6.onmouseover = p.onMouseOn
+            input6.onmouseout = p.onMouseClose
+
+            let input7 = document.getElementById("i7")
+            input7.onmouseover = p.onMouseOn
+            input7.onmouseout = p.onMouseClose
+
+            let input8 = document.getElementById("i8")
+            input8.onmouseover = p.onMouseOn
+            input8.onmouseout = p.onMouseClose
+
+            let input9 = document.getElementById("i9")
+            input9.onmouseover = p.onMouseOn
+            input9.onmouseout = p.onMouseClose
+
+            let input10 = document.getElementById("i10")
+            input10.onmouseover = p.onMouseOn
+            input10.onmouseout = p.onMouseClose
+
+            let input11 = document.getElementById("i11")
+            input11.onmouseover = p.onMouseOn
+            input11.onmouseout = p.onMouseClose
+
+            let input12 = document.getElementById("i12")
+            input12.onmouseover = p.onMouseOn
+            input12.onmouseout = p.onMouseClose
+
+            let input13 = document.getElementById("i13")
+            input13.onmouseover = p.onMouseOn
+            input13.onmouseout = p.onMouseClose
+
+            let input14 = document.getElementById("i14")
+            input14.onmouseover = p.onMouseOn
+            input14.onmouseout = p.onMouseClose
+
+            let input15 = document.getElementById("i15")
+            input15.onmouseover = p.onMouseOn
+            input15.onmouseout = p.onMouseClose
+
+            let input16 = document.getElementById("i16")
+            input16.onmouseover = p.onMouseOn
+            input16.onmouseout = p.onMouseClose
+
+            let input17 = document.getElementById("i17")
+            input17.onmouseover = p.onMouseOn
+            input17.onmouseout = p.onMouseClose
+
+            let input18 = document.getElementById("i18")
+            input18.onmouseover = p.onMouseOn
+            input18.onmouseout = p.onMouseClose
+
+            let input19 = document.getElementById("i19")
+            input19.onmouseover = p.onMouseOn
+            input19.onmouseout = p.onMouseClose
+
+            let input20 = document.getElementById("i20")
+            input20.onmouseover = p.onMouseOn
+            input20.onmouseout = p.onMouseClose
+
+            let input21 = document.getElementById("i21")
+            input21.onmouseover = p.onMouseOn
+            input21.onmouseout = p.onMouseClose
+
+            let input22 = document.getElementById("i22")
+            input22.onmouseover = p.onMouseOn
+            input22.onmouseout = p.onMouseClose
+
+            let input23 = document.getElementById("i23")
+            input23.onmouseover = p.onMouseOn
+            input23.onmouseout = p.onMouseClose
+
+            let input24 = document.getElementById("i24")
+            input24.onmouseover = p.onMouseOn
+            input24.onmouseout = p.onMouseClose
+
+            let input25 = document.getElementById("i25")
+            input25.onmouseover = p.onMouseOn
+            input25.onmouseout = p.onMouseClose
+
+            let input26 = document.getElementById("i26")
+            input26.onmouseover = p.onMouseOn
+            input26.onmouseout = p.onMouseClose
+
+            let input27 = document.getElementById("i27")
+            input27.onmouseover = p.onMouseOn
+            input27.onmouseout = p.onMouseClose
+
+            let input28 = document.getElementById("i28")
+            input28.onmouseover = p.onMouseOn
+            input28.onmouseout = p.onMouseClose
+
+            let input29 = document.getElementById("i29")
+            input29.onmouseover = p.onMouseOn
+            input29.onmouseout = p.onMouseClose
+
+            let input30 = document.getElementById("i30")
+            input30.onmouseover = p.onMouseOn
+            input30.onmouseout = p.onMouseClose
+
+            let input31 = document.getElementById("i31")
+            input31.onmouseover = p.onMouseOn
+            input31.onmouseout = p.onMouseClose
+
+            let input32 = document.getElementById("i32")
+            input32.onmouseover = p.onMouseOn
+            input32.onmouseout = p.onMouseClose
+
+            let input33 = document.getElementById("i33")
+            input33.onmouseover = p.onMouseOn
+            input33.onmouseout = p.onMouseClose
+
+            let input34 = document.getElementById("i34")
+            input34.onmouseover = p.onMouseOn
+            input34.onmouseout = p.onMouseClose
+
+            let input35 = document.getElementById("i35")
+            input35.onmouseover = p.onMouseOn
+            input35.onmouseout = p.onMouseClose
+
+            let input36 = document.getElementById("i36")
+            input36.onmouseover = p.onMouseOn
+            input36.onmouseout = p.onMouseClose
+
+            let input37 = document.getElementById("i37")
+            input37.onmouseover = p.onMouseOn
+            input37.onmouseout = p.onMouseClose
+
+            let input38 = document.getElementById("i38")
+            input38.onmouseover = p.onMouseOn
+            input38.onmouseout = p.onMouseClose
+
+            let input39 = document.getElementById("i39")
+            input39.onmouseover = p.onMouseOn
+            input39.onmouseout = p.onMouseClose
+
+            let input40 = document.getElementById("i40")
+            input40.onmouseover = p.onMouseOn
+            input40.onmouseout = p.onMouseClose
+
+            let input41 = document.getElementById("i41")
+            input41.onmouseover = p.onMouseOn
+            input41.onmouseout = p.onMouseClose
+
+            let input42 = document.getElementById("i42")
+            input42.onmouseover = p.onMouseOn
+            input42.onmouseout = p.onMouseClose
+
+            let input43 = document.getElementById("i43")
+            input43.onmouseover = p.onMouseOn
+            input43.onmouseout = p.onMouseClose
+
+            let input44 = document.getElementById("i44")
+            input44.onmouseover = p.onMouseOn
+            input44.onmouseout = p.onMouseClose
+
+            let input45 = document.getElementById("i45")
+            input45.onmouseover = p.onMouseOn
+            input45.onmouseout = p.onMouseClose
+
+            let input46 = document.getElementById("i46")
+            input46.onmouseover = p.onMouseOn
+            input46.onmouseout = p.onMouseClose
+
+            let input47 = document.getElementById("i47")
+            input47.onmouseover = p.onMouseOn
+            input47.onmouseout = p.onMouseClose
+
+            let input48 = document.getElementById("i48")
+            input48.onmouseover = p.onMouseOn
+            input48.onmouseout = p.onMouseClose
+
+            let input49 = document.getElementById("i49")
+            input49.onmouseover = p.onMouseOn
+            input49.onmouseout = p.onMouseClose
+
+            let input50 = document.getElementById("i50")
+            input50.onmouseover = p.onMouseOn
+            input50.onmouseout = p.onMouseClose
+
+            let input51 = document.getElementById("i51")
+            input51.onmouseover = p.onMouseOn
+            input51.onmouseout = p.onMouseClose
+
+            let input52 = document.getElementById("i52")
+            input52.onmouseover = p.onMouseOn
+            input52.onmouseout = p.onMouseClose
+
+            let input53 = document.getElementById("i53")
+            input53.onmouseover = p.onMouseOn
+            input53.onmouseout = p.onMouseClose
+
+            let input54 = document.getElementById("i54")
+            input54.onmouseover = p.onMouseOn
+            input54.onmouseout = p.onMouseClose
+
+            let input55 = document.getElementById("i55")
+            input55.onmouseover = p.onMouseOn
+            input55.onmouseout = p.onMouseClose
+
+            let input56 = document.getElementById("i56")
+            input56.onmouseover = p.onMouseOn
+            input56.onmouseout = p.onMouseClose
+
+            let input57 = document.getElementById("i57")
+            input57.onmouseover = p.onMouseOn
+            input57.onmouseout = p.onMouseClose
+
+            let input58 = document.getElementById("i58")
+            input58.onmouseover = p.onMouseOn
+            input58.onmouseout = p.onMouseClose
+
+            let input59 = document.getElementById("i59")
+            input59.onmouseover = p.onMouseOn
+            input59.onmouseout = p.onMouseClose
+
+            let input60 = document.getElementById("i60")
+            input60.onmouseover = p.onMouseOn
+            input60.onmouseout = p.onMouseClose
+
+            let input61 = document.getElementById("i61")
+            input61.onmouseover = p.onMouseOn
+            input61.onmouseout = p.onMouseClose
+
+            let input62 = document.getElementById("i62")
+            input62.onmouseover = p.onMouseOn
+            input62.onmouseout = p.onMouseClose
+
+            let input63 = document.getElementById("i63")
+            input63.onmouseover = p.onMouseOn
+            input63.onmouseout = p.onMouseClose
+
+            let input64 = document.getElementById("i64")
+            input64.onmouseover = p.onMouseOn
+            input64.onmouseout = p.onMouseClose
+
+            let input65 = document.getElementById("i65")
+            input65.onmouseover = p.onMouseOn
+            input65.onmouseout = p.onMouseClose
+
+            let input66 = document.getElementById("i66")
+            input66.onmouseover = p.onMouseOn
+            input66.onmouseout = p.onMouseClose
+
+            let input67 = document.getElementById("i67")
+            input67.onmouseover = p.onMouseOn
+            input67.onmouseout = p.onMouseClose
+
+            let input68 = document.getElementById("i68")
+            input68.onmouseover = p.onMouseOn
+            input68.onmouseout = p.onMouseClose
+
+            let input69 = document.getElementById("i69")
+            input69.onmouseover = p.onMouseOn
+            input69.onmouseout = p.onMouseClose
+
+            let input70 = document.getElementById("i70")
+            input70.onmouseover = p.onMouseOn
+            input70.onmouseout = p.onMouseClose
+
+            let input71 = document.getElementById("i71")
+            input71.onmouseover = p.onMouseOn
+            input71.onmouseout = p.onMouseClose
+
+            let input72 = document.getElementById("i72")
+            input72.onmouseover = p.onMouseOn
+            input72.onmouseout = p.onMouseClose
+
+            let input73 = document.getElementById("i73")
+            input73.onmouseover = p.onMouseOn
+            input73.onmouseout = p.onMouseClose
+
+            let input74 = document.getElementById("i74")
+            input74.onmouseover = p.onMouseOn
+            input74.onmouseout = p.onMouseClose
+
+            let input75 = document.getElementById("i75")
+            input75.onmouseover = p.onMouseOn
+            input75.onmouseout = p.onMouseClose
+
+            let input76 = document.getElementById("i76")
+            input76.onmouseover = p.onMouseOn
+            input76.onmouseout = p.onMouseClose
+
+            let input77 = document.getElementById("i77")
+            input77.onmouseover = p.onMouseOn
+            input77.onmouseout = p.onMouseClose
+
+            let input78 = document.getElementById("i78")
+            input78.onmouseover = p.onMouseOn
+            input78.onmouseout = p.onMouseClose
+
+            let input79 = document.getElementById("i79")
+            input79.onmouseover = p.onMouseOn
+            input79.onmouseout = p.onMouseClose
+
+            let input80 = document.getElementById("i80")
+            input80.onmouseover = p.onMouseOn
+            input80.onmouseout = p.onMouseClose
+
+            let input81 = document.getElementById("i81")
+            input81.onmouseover = p.onMouseOn
+            input81.onmouseout = p.onMouseClose
+
+            let input82 = document.getElementById("i82")
+            input82.onmouseover = p.onMouseOn
+            input82.onmouseout = p.onMouseClose
+
+            let input83 = document.getElementById("i83")
+            input83.onmouseover = p.onMouseOn
+            input83.onmouseout = p.onMouseClose
+
+            let input84 = document.getElementById("i84")
+            input84.onmouseover = p.onMouseOn
+            input84.onmouseout = p.onMouseClose
+
+            let input85 = document.getElementById("i85")
+            input85.onmouseover = p.onMouseOn
+            input85.onmouseout = p.onMouseClose
+
+            let input86 = document.getElementById("i86")
+            input86.onmouseover = p.onMouseOn
+            input86.onmouseout = p.onMouseClose
+
+            let input87 = document.getElementById("i87")
+            input87.onmouseover = p.onMouseOn
+            input87.onmouseout = p.onMouseClose
+
+            let input88 = document.getElementById("i88")
+            input88.onmouseover = p.onMouseOn
+            input88.onmouseout = p.onMouseClose
+
+            let input89 = document.getElementById("i89")
+            input89.onmouseover = p.onMouseOn
+            input89.onmouseout = p.onMouseClose
+
+            let input90 = document.getElementById("i90")
+            input90.onmouseover = p.onMouseOn
+            input90.onmouseout = p.onMouseClose
+
+            let input91 = document.getElementById("i91")
+            input91.onmouseover = p.onMouseOn
+            input91.onmouseout = p.onMouseClose
+
+            let input92 = document.getElementById("i92")
+            input92.onmouseover = p.onMouseOn
+            input92.onmouseout = p.onMouseClose
+
+            let input93 = document.getElementById("i93")
+            input93.onmouseover = p.onMouseOn
+            input93.onmouseout = p.onMouseClose
+
+            let input94 = document.getElementById("i94")
+            input94.onmouseover = p.onMouseOn
+            input94.onmouseout = p.onMouseClose
+
+            let input95 = document.getElementById("i95")
+            input95.onmouseover = p.onMouseOn
+            input95.onmouseout = p.onMouseClose
+
+            let input96 = document.getElementById("i96")
+            input96.onmouseover = p.onMouseOn
+            input96.onmouseout = p.onMouseClose
+
+            let input97 = document.getElementById("i97")
+            input97.onmouseover = p.onMouseOn
+            input97.onmouseout = p.onMouseClose
+
+            let input98 = document.getElementById("i98")
+            input98.onmouseover = p.onMouseOn
+            input98.onmouseout = p.onMouseClose
+
+            let input99 = document.getElementById("i99")
+            input99.onmouseover = p.onMouseOn
+            input99.onmouseout = p.onMouseClose
+
+            let input100 = document.getElementById("i100")
+            input100.onmouseover = p.onMouseOn
+            input100.onmouseout = p.onMouseClose
+
+
+            // FUNÇÃO PRINCIPAL, RESPONSÁVEL PELA ATRIBUIÇÃO DE VALORES INSERIDOS NOS INPUT PELO USUÁRIO.
+
+            function principal(x) {
+                return x.value
+            }
+
+            // FUNÇÃO PARA O SORTEIO
+
+            function sorteio() {
+
+                let i1 = document.getElementById("i1")
+                let n1 = principal(i1)
+
+                let i2 = document.getElementById("i2")
+                let n2 = principal(i2)
+
+                let i3 = document.getElementById("i3")
+                let n3 = principal(i3)
+
+                let i4 = document.getElementById("i4")
+                let n4 = principal(i4)
+
+                let i5 = document.getElementById("i5")
+                let n5 = principal(i5)
+
+                let i6 = document.getElementById("i6")
+                let n6 = principal(i6)
+
+                let i7 = document.getElementById("i7")
+                let n7 = principal(i7)
+
+                let i8 = document.getElementById("i8")
+                let n8 = principal(i8)
+
+                let i9 = document.getElementById("i9")
+                let n9 = principal(i9)
+
+                let i10 = document.getElementById("i10")
+                let n10 = principal(i10)
+
+                let i11 = document.getElementById("i11")
+                let n11 = principal(i11)
+
+                let i12 = document.getElementById("i12")
+                let n12 = principal(i12)
+
+                let i13 = document.getElementById("i13")
+                let n13 = principal(i13)
+
+                let i14 = document.getElementById("i14")
+                let n14 = principal(i14)
+
+                let i15 = document.getElementById("i15")
+                let n15 = principal(i15)
+
+                let i16 = document.getElementById("i16")
+                let n16 = principal(i16)
+
+                let i17 = document.getElementById("i17")
+                let n17 = principal(i17)
+
+                let i18 = document.getElementById("i18")
+                let n18 = principal(i18)
+
+                let i19 = document.getElementById("i19")
+                let n19 = principal(i19)
+
+                let i20 = document.getElementById("i20")
+                let n20 = principal(i20)
+
+                let i21 = document.getElementById("i21")
+                let n21 = principal(i21)
+
+                let i22 = document.getElementById("i22")
+                let n22 = principal(i22)
+
+                let i23 = document.getElementById("i23")
+                let n23 = principal(i23)
+
+                let i24 = document.getElementById("i24")
+                let n24 = principal(i24)
+
+                let i25 = document.getElementById("i25")
+                let n25 = principal(i25)
+
+                let i26 = document.getElementById("i26")
+                let n26 = principal(i26)
+
+                let i27 = document.getElementById("i27")
+                let n27 = principal(i27)
+
+                let i28 = document.getElementById("i28")
+                let n28 = principal(i28)
+
+                let i29 = document.getElementById("i29")
+                let n29 = principal(i29)
+
+                let i30 = document.getElementById("i30")
+                let n30 = principal(i30)
+
+                let i31 = document.getElementById("i31")
+                let n31 = principal(i31)
+
+                let i32 = document.getElementById("i32")
+                let n32 = principal(i32)
+
+                let i33 = document.getElementById("i33")
+                let n33 = principal(i33)
+
+                let i34 = document.getElementById("i34")
+                let n34 = principal(i34)
+
+                let i35 = document.getElementById("i35")
+                let n35 = principal(i35)
+
+                let i36 = document.getElementById("i36")
+                let n36 = principal(i36)
+
+                let i37 = document.getElementById("i37")
+                let n37 = principal(i37)
+
+                let i38 = document.getElementById("i38")
+                let n38 = principal(i38)
+
+                let i39 = document.getElementById("i39")
+                let n39 = principal(i39)
+
+                let i40 = document.getElementById("i40")
+                let n40 = principal(i40)
+
+                let i41 = document.getElementById("i41")
+                let n41 = principal(i41)
+
+                let i42 = document.getElementById("i42")
+                let n42 = principal(i42)
+
+                let i43 = document.getElementById("i43")
+                let n43 = principal(i43)
+
+                let i44 = document.getElementById("i44")
+                let n44 = principal(i44)
+
+                let i45 = document.getElementById("i45")
+                let n45 = principal(i45)
+
+                let i46 = document.getElementById("i46")
+                let n46 = principal(i46)
+
+                let i47 = document.getElementById("i47")
+                let n47 = principal(i47)
+
+                let i48 = document.getElementById("i48")
+                let n48 = principal(i48)
+
+                let i49 = document.getElementById("i49")
+                let n49 = principal(i49)
+
+                let i50 = document.getElementById("i50")
+                let n50 = principal(i50)
+
+                let i51 = document.getElementById("i51")
+                let n51 = principal(i51)
+
+                let i52 = document.getElementById("i52")
+                let n52 = principal(i52)
+
+                let i53 = document.getElementById("i53")
+                let n53 = principal(i53)
+
+                let i54 = document.getElementById("i54")
+                let n54 = principal(i54)
+
+                let i55 = document.getElementById("i55")
+                let n55 = principal(i55)
+
+                let i56 = document.getElementById("i56")
+                let n56 = principal(i56)
+
+                let i57 = document.getElementById("i57")
+                let n57 = principal(i57)
+
+                let i58 = document.getElementById("i58")
+                let n58 = principal(i58)
+
+                let i59 = document.getElementById("i59")
+                let n59 = principal(i59)
+
+                let i60 = document.getElementById("i60")
+                let n60 = principal(i60)
+
+                let i61 = document.getElementById("i61")
+                let n61 = principal(i61)
+
+                let i62 = document.getElementById("i62")
+                let n62 = principal(i62)
+
+                let i63 = document.getElementById("i63")
+                let n63 = principal(i63)
+
+                let i64 = document.getElementById("i64")
+                let n64 = principal(i64)
+
+                let i65 = document.getElementById("i65")
+                let n65 = principal(i65)
+
+                let i66 = document.getElementById("i66")
+                let n66 = principal(i66)
+
+                let i67 = document.getElementById("i67")
+                let n67 = principal(i67)
+
+                let i68 = document.getElementById("i68")
+                let n68 = principal(i68)
+
+                let i69 = document.getElementById("i69")
+                let n69 = principal(i69)
+
+                let i70 = document.getElementById("i70")
+                let n70 = principal(i70)
+
+                let i71 = document.getElementById("i71")
+                let n71 = principal(i71)
+
+                let i72 = document.getElementById("i72")
+                let n72 = principal(i72)
+
+                let i73 = document.getElementById("i73")
+                let n73 = principal(i73)
+
+                let i74 = document.getElementById("i74")
+                let n74 = principal(i74)
+
+                let i75 = document.getElementById("i75")
+                let n75 = principal(i75)
+
+                let i76 = document.getElementById("i76")
+                let n76 = principal(i76)
+
+                let i77 = document.getElementById("i77")
+                let n77 = principal(i77)
+
+                let i78 = document.getElementById("i78")
+                let n78 = principal(i78)
+
+                let i79 = document.getElementById("i79")
+                let n79 = principal(i79)
+
+                let i80 = document.getElementById("i80")
+                let n80 = principal(i80)
+
+                let i81 = document.getElementById("i81")
+                let n81 = principal(i81)
+
+                let i82 = document.getElementById("i82")
+                let n82 = principal(i82)
+
+                let i83 = document.getElementById("i83")
+                let n83 = principal(i83)
+
+                let i84 = document.getElementById("i84")
+                let n84 = principal(i84)
+
+                let i85 = document.getElementById("i85")
+                let n85 = principal(i85)
+
+                let i86 = document.getElementById("i86")
+                let n86 = principal(i86)
+
+                let i87 = document.getElementById("i87")
+                let n87 = principal(i87)
+
+                let i88 = document.getElementById("i88")
+                let n88 = principal(i88)
+
+                let i89 = document.getElementById("i89")
+                let n89 = principal(i89)
+
+                let i90 = document.getElementById("i90")
+                let n90 = principal(i90)
+
+                let i91 = document.getElementById("i91")
+                let n91 = principal(i91)
+
+                let i92 = document.getElementById("i92")
+                let n92 = principal(i92)
+
+                let i93 = document.getElementById("i93")
+                let n93 = principal(i93)
+
+                let i94 = document.getElementById("i94")
+                let n94 = principal(i94)
+
+                let i95 = document.getElementById("i95")
+                let n95 = principal(i95)
+
+                let i96 = document.getElementById("i96")
+                let n96 = principal(i96)
+
+                let i97 = document.getElementById("i97")
+                let n97 = principal(i97)
+
+                let i98 = document.getElementById("i98")
+                let n98 = principal(i98)
+
+                let i99 = document.getElementById("i99")
+                let n99 = principal(i99)
+
+                let i100 = document.getElementById("i100")
+                let n100 = principal(i100)
+
+                var person = [n1, n2, n3, n4, n5, n6, n7, n8, n9, n10,
+                    n11, n12, n13, n14, n15, n16, n17, n18, n19,
+                    n20, n21, n22, n23, n24, n25, n26, n27, n28,
+                    n29, n30, n31, n32, n33, n34, n35, n36, n37,
+                    n38, n39, n40, n41, n42, n43, n44, n45, n46,
+                    n47, n48, n49, n50, n51, n52, n53, n54, n55,
+                    n56, n57, n58, n59, n60, n61, n62, n63, n64,
+                    n65, n66, n67, n68, n69, n70, n71, n72, n73,
+                    n74, n75, n76, n77, n78, n79, n80, n81, n82,
+                    n83, n84, n85, n86, n87, n88, n89, n90, n91,
+                    n92, n93, n94, n95, n96, n97, n98, n99, n100]
+
+                let people = person.length
+                let rational = Math.floor(Math.random() * people)
+                let sorteado = person[rational]
+
+
+                let h1 = document.getElementById("h1")
+                h1.innerHTML = sorteado
+
+            }
+
+            function play() {
+
+                setTimeout(sorteio, 3000)
+
+            }
+
+            h2.onclick = play
+
+        }
+    </script>
+
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        body {
+            background-color: #212223;
+        }
+
+        #quadro {
+            position: relative;
+            background-color: #121110;
+            max-width: 1050px;
+            height: 3200px;
+
+            margin: auto;
+            padding: 30px;
+            padding-left: 0px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            border: 5px solid #32CD30;
+            border-radius: 70px;
+        }
+
+        #h1 {
+            position: absolute;
+            text-align: center;
+            color: #EBE7D0;
+            font-family: 'Press Start 2P';
+            font-size: 40px;
+            margin-left: 27%;
+            margin-top: 20px;
+        }
+
+        #back {
+            position: absolute;
+            color: #EBE7D0;
+            font-family: 'Press Start 2P';
+            padding: 8px;
+            font-size: 20px;
+            margin-left: 15px;
+
+            text-decoration: none;
+            background-color: #121110;
+            border: 5px solid #32CD30;
+            border-radius: 35px;
+            cursor: pointer;
+        }
+
+        #back:hover {
+            color: #32CD30;
+        }
+
+        #h2 {
+            position: absolute;
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 35%;
+            padding: 15px;
+
+            color: #EBE7D0;
+            font-family: 'Press Start 2P';
+            font-size: 30px;
+            background-color: #32CD30;
+            border: 5px solid #32CD30;
+            border-radius: 35px;
+            cursor: pointer;
+        }
+
+        #h2:active {
+            background: #EBE7D0;
+            color: #32CD30;
+        }
+
+        #list_one {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 225px;
+            margin-left: 180px;
+        }
+
+        #list_two {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 225px;
+            margin-left: 550px;
+        }
+
+        #list_three {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 525px;
+            margin-left: 180px;
+        }
+
+        #list_four {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 525px;
+            margin-left: 550px;
+        }
+
+        #list_five {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 825px;
+            margin-left: 180px;
+        }
+
+        #list_six {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 825px;
+            margin-left: 550px;
+        }
+
+        #list_seven {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 1125px;
+            margin-left: 180px;
+        }
+
+        #list_eight {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 1125px;
+            margin-left: 550px;
+        }
+
+        #list_nine {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 1425px;
+            margin-left: 180px;
+        }
+
+        #list_ten {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 1425px;
+            margin-left: 550px;
+        }
+
+        #list_eleven {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 1725px;
+            margin-left: 180px;
+        }
+
+        #list_twelve {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 1725px;
+            margin-left: 550px;
+        }
+
+        #list_thirteen {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 2025px;
+            margin-left: 180px;
+        }
+
+        #list_fourteen {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 2025px;
+            margin-left: 550px;
+        }
+
+        #list_fifteen {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 2325px;
+            margin-left: 180px;
+        }
+
+        #list_sixteen {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 2325px;
+            margin-left: 550px;
+        }
+
+        #list_seventeen {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 2625px;
+            margin-left: 180px;
+        }
+
+        #list_eighteen {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 2625px;
+            margin-left: 550px;
+        }
+
+        #list_nineteen {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 2925px;
+            margin-left: 180px;
+        }
+
+        #list_twenty {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 2925px;
+            margin-left: 550px;
+        }
+
+        input {
+            padding: 12px;
+            padding-right: 0;
+            font-weight: bold;
+            box-sizing: border-box;
+
+            color: #121110;
+            background: #EBE7D0;
+            font-family: 'Press Start 2P';
+            font-size: 13px;
+
+            margin-bottom: 10px;
+            border-radius: 30px;
+            outline-color: #32CD30;
+        }
+
+        /*RESPONSIVIDADE MOBILE*/
+
+        @media screen and (max-width: 1280px) {
+            /*NEST HUB MAX*/
+
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 850px;
+                height: 4150px;
+
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 30px;
+
+                border: 15px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 3.5vw;
+
+                margin-left: 18%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 33%;
+                padding: 15px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 30px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 15px;
+                font-size: 1.8vw;
+                margin-left: 15px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 10px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 100px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 460px;
+            }
+
+            #list_three {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 100px;
+            }
+
+            #list_four {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 460px;
+            }
+
+            #list_five {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 100px;
+            }
+
+            #list_six {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 460px;
+            }
+
+            #list_seven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1425px;
+                margin-left: 100px;
+            }
+
+            #list_eight {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1425px;
+                margin-left: 460px;
+            }
+
+            #list_nine {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1825px;
+                margin-left: 100px;
+            }
+
+            #list_ten {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1825px;
+                margin-left: 460px;
+            }
+
+            #list_eleven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2225px;
+                margin-left: 100px;
+            }
+
+            #list_twelve {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2225px;
+                margin-left: 460px;
+            }
+
+            #list_thirteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2625px;
+                margin-left: 100px;
+            }
+
+            #list_fourteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2625px;
+                margin-left: 460px;
+            }
+
+            #list_fifteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3025px;
+                margin-left: 100px;
+            }
+
+            #list_sixteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3025px;
+                margin-left: 460px;
+            }
+
+            #list_seventeen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3425px;
+                margin-left: 100px;
+            }
+
+            #list_eighteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3425px;
+                margin-left: 460px;
+            }
+
+            #list_nineteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3825px;
+                margin-left: 100px;
+            }
+
+            #list_twenty {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3825px;
+                margin-left: 460px;
+            }
+
+            input {
+                width: 300px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                text-align: center;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4vw;
+
+                padding: 12px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+
+        }
+
+        @media screen and (max-width: 1024px) {
+            /*NEST HUB*/
+
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 650px;
+                height: 3980px;
+
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 30px;
+
+                border: 15px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 3.5vw;
+
+                margin-left: 15%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 28%;
+                padding: 15px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 30px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 15px;
+                font-size: 1.8vw;
+                margin-left: 15px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 10px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 50px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 360px;
+            }
+
+            #list_three {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 50px;
+            }
+
+            #list_four {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 360px;
+            }
+
+            #list_five {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 50px;
+            }
+
+            #list_six {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 360px;
+            }
+
+            #list_seven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1400px;
+                margin-left: 50px;
+            }
+
+            #list_eight {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1400px;
+                margin-left: 360px;
+            }
+
+            #list_nine {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1775px;
+                margin-left: 50px;
+            }
+
+            #list_ten {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1775px;
+                margin-left: 360px;
+            }
+
+            #list_eleven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2150px;
+                margin-left: 50px;
+            }
+
+            #list_twelve {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2150px;
+                margin-left: 360px;
+            }
+
+            #list_thirteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2525px;
+                margin-left: 50px;
+            }
+
+            #list_fourteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2525px;
+                margin-left: 360px;
+            }
+
+            #list_fifteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2900px;
+                margin-left: 50px;
+            }
+
+            #list_sixteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2900px;
+                margin-left: 360px;
+            }
+
+            #list_seventeen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3275px;
+                margin-left: 50px;
+            }
+
+            #list_eighteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3275px;
+                margin-left: 360px;
+            }
+
+            #list_nineteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3650px;
+                margin-left: 50px;
+            }
+
+            #list_twenty {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3650px;
+                margin-left: 360px;
+            }
+
+            input {
+                width: 250px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4vw;
+
+                padding: 12px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+
+        }
+        @media screen and (max-width: 912px) {/*SURFACE PRO 7*/
+
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 580px;
+                height: 3950px;
+
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 30px;
+
+                border: 15px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 3.5vw;
+
+                margin-left: 15%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 28%;
+                padding: 15px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 30px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 12px;
+                font-size: 1.5vw;
+                margin-left: 15px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 10px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 50px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 320px;
+            }
+
+            #list_three {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 50px;
+            }
+
+            #list_four {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 320px;
+            }
+
+            #list_five {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 50px;
+            }
+
+            #list_six {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 320px;
+            }
+
+            #list_seven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1400px;
+                margin-left: 50px;
+            }
+
+            #list_eight {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1400px;
+                margin-left: 320px;
+            }
+
+            #list_nine {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1775px;
+                margin-left: 50px;
+            }
+
+            #list_ten {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1775px;
+                margin-left: 320px;
+            }
+
+            #list_eleven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2150px;
+                margin-left: 50px;
+            }
+
+            #list_twelve {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2150px;
+                margin-left: 320px;
+            }
+
+            #list_thirteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2525px;
+                margin-left: 50px;
+            }
+
+            #list_fourteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2525px;
+                margin-left: 320px;
+            }
+
+            #list_fifteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2900px;
+                margin-left: 50px;
+            }
+
+            #list_sixteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2900px;
+                margin-left: 320px;
+            }
+
+            #list_seventeen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3275px;
+                margin-left: 50px;
+            }
+
+            #list_eighteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3275px;
+                margin-left: 320px;
+            }
+
+            #list_nineteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3650px;
+                margin-left: 50px;
+            }
+
+            #list_twenty {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3650px;
+                margin-left: 320px;
+            }
+
+            input {
+                width: 220px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4vw;
+
+                padding: 12px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+        
+        }
+        @media screen and (max-width: 820px) {/*iPad AIR*/
+            
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 500px;
+                height: 3950px;
+
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 30px;
+
+                border: 15px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 3.5vw;
+
+                margin-left: 15%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 25%;
+                padding: 15px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 30px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 12px;
+                font-size: 1.5vw;
+                margin-left: 15px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 10px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 30px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 290px;
+            }
+
+            #list_three {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 30px;
+            }
+
+            #list_four {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 290px;
+            }
+
+            #list_five {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 30px;
+            }
+
+            #list_six {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 290px;
+            }
+
+            #list_seven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1400px;
+                margin-left: 30px;
+            }
+
+            #list_eight {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1400px;
+                margin-left: 290px;
+            }
+
+            #list_nine {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1775px;
+                margin-left: 30px;
+            }
+
+            #list_ten {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1775px;
+                margin-left: 290px;
+            }
+
+            #list_eleven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2150px;
+                margin-left: 30px;
+            }
+
+            #list_twelve {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2150px;
+                margin-left: 290px;
+            }
+
+            #list_thirteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2525px;
+                margin-left: 30px;
+            }
+
+            #list_fourteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2525px;
+                margin-left: 290px;
+            }
+
+            #list_fifteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2900px;
+                margin-left: 30px;
+            }
+
+            #list_sixteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2900px;
+                margin-left: 290px;
+            }
+
+            #list_seventeen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3275px;
+                margin-left: 30px;
+            }
+
+            #list_eighteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3275px;
+                margin-left: 290px;
+            }
+
+            #list_nineteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3650px;
+                margin-left: 30px;
+            }
+
+            #list_twenty {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3650px;
+                margin-left: 290px;
+            }
+
+            input {
+                width: 200px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4vw;
+
+                padding: 12px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+        
+        }
+        @media screen and (max-width: 540px) {/*SURFACE DUO*/
+            
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 320px;
+                height: 3900px;
+
+                margin: auto;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                padding: 30px;
+
+                border: 12px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 4.5vw;
+
+                margin-left: 4%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 16%;
+                padding: 10px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 25px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 10px;
+                font-size: 1.5vw;
+                margin-left: 10px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 0px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 180px;
+            }
+
+            #list_three {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 0px;
+            }
+
+            #list_four {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 650px;
+                margin-left: 180px;
+            }
+
+            #list_five {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 0px;
+            }
+
+            #list_six {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1025px;
+                margin-left: 180px;
+            }
+
+            #list_seven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1400px;
+                margin-left: 0px;
+            }
+
+            #list_eight {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1400px;
+                margin-left: 180px;
+            }
+
+            #list_nine {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1775px;
+                margin-left: 0px;
+            }
+
+            #list_ten {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 1775px;
+                margin-left: 180px;
+            }
+
+            #list_eleven {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2150px;
+                margin-left: 0px;
+            }
+
+            #list_twelve {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2150px;
+                margin-left: 180px;
+            }
+
+            #list_thirteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2525px;
+                margin-left: 0px;
+            }
+
+            #list_fourteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2525px;
+                margin-left: 180px;
+            }
+
+            #list_fifteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2900px;
+                margin-left: 0px;
+            }
+
+            #list_sixteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 2900px;
+                margin-left: 180px;
+            }
+
+            #list_seventeen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3275px;
+                margin-left: 0px;
+            }
+
+            #list_eighteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3275px;
+                margin-left: 180px;
+            }
+
+            #list_nineteen {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3650px;
+                margin-left: 0px;
+            }
+
+            #list_twenty {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 3650px;
+                margin-left: 180px;
+            }
+
+            input {
+                width: 150px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.5vw;
+
+                padding: 10px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+        
+        }
+        @media screen and (max-width: 414px) {/*IPHONE XR*/
+
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 320px;
+                width: 260px;
+                height: 2650px;
+
+                margin: auto;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                padding: 30px;
+
+                border: 8px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 4.8vw;
+
+                margin-left: -65px;
+                margin-top: 20px;
+            }
+
+            #h2 {
+                position: absolute;
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 15%;
+                padding: 12px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 20px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 6px;
+                font-size: 1.5vw;
+                margin-left: 8px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 200px;
+                margin-left: 10px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 200px;
+                margin-left: 150px;
+            }
+
+            #list_three {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 450px;
+                margin-left: 10px;
+            }
+
+            #list_four {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 450px;
+                margin-left: 150px;
+            }
+
+            #list_five {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 700px;
+                margin-left: 10px;
+            }
+
+            #list_six {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 700px;
+                margin-left: 150px;
+            }
+
+            #list_seven {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 950px;
+                margin-left: 10px;
+            }
+
+            #list_eight {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 950px;
+                margin-left: 150px;
+            }
+
+            #list_nine {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1200px;
+                margin-left: 10px;
+            }
+
+            #list_ten {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1200px;
+                margin-left: 150px;
+            }
+
+            #list_eleven {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1450px;
+                margin-left: 10px;
+            }
+
+            #list_twelve {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1450px;
+                margin-left: 150px;
+            }
+
+            #list_thirteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1700px;
+                margin-left: 10px;
+            }
+
+            #list_fourteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1700px;
+                margin-left: 150px;
+            }
+
+            #list_fifteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1950px;
+                margin-left: 10px;
+            }
+
+            #list_sixteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1950px;
+                margin-left: 150px;
+            }
+
+            #list_seventeen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 2200px;
+                margin-left: 10px;
+            }
+
+            #list_eighteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 2200px;
+                margin-left: 150px;
+            }
+
+            #list_nineteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 2450px;
+                margin-left: 10px;
+            }
+
+            #list_twenty {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 2450px;
+                margin-left: 150px;
+            }
+
+            input {
+                width: 110px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.5vw;
+
+                padding: 6px;
+                margin-bottom: 15px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+        
+        }
+        @media screen and (max-width: 390px) { /*IPHONE 12 PRO*/
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 320px;
+                width: 250px;
+                height: 2650px;
+
+                margin: auto;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                padding: 30px;
+
+                border: 6px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 4.8vw;
+
+                margin-left: -70px;
+                margin-top: 20px;
+            }
+
+            #h2 {
+                position: absolute;
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 12%;
+                padding: 12px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 20px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 5px;
+                font-size: 1.5vw;
+                margin-left: 8px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 3px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 200px;
+                margin-left: 8px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 200px;
+                margin-left: 140px;
+            }
+
+            #list_three {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 450px;
+                margin-left: 8px;
+            }
+
+            #list_four {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 450px;
+                margin-left: 140px;
+            }
+
+            #list_five {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 700px;
+                margin-left: 8px;
+            }
+
+            #list_six {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 700px;
+                margin-left: 140px;
+            }
+
+            #list_seven {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 950px;
+                margin-left: 8px;
+            }
+
+            #list_eight {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 950px;
+                margin-left: 140px;
+            }
+
+            #list_nine {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1200px;
+                margin-left: 8px;
+            }
+
+            #list_ten {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1200px;
+                margin-left: 140px;
+            }
+
+            #list_eleven {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1450px;
+                margin-left: 8px;
+            }
+
+            #list_twelve {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1450px;
+                margin-left: 140px;
+            }
+
+            #list_thirteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1700px;
+                margin-left: 8px;
+            }
+
+            #list_fourteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1700px;
+                margin-left: 140px;
+            }
+
+            #list_fifteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1950px;
+                margin-left: 8px;
+            }
+
+            #list_sixteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 1950px;
+                margin-left: 140px;
+            }
+
+            #list_seventeen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 2200px;
+                margin-left: 8px;
+            }
+
+            #list_eighteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 2200px;
+                margin-left: 140px;
+            }
+
+            #list_nineteen {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 2450px;
+                margin-left: 8px;
+            }
+
+            #list_twenty {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 2450px;
+                margin-left: 140px;
+            }
+
+            input {
+                width: 110px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.5vw;
+
+                padding: 6px;
+                margin-bottom: 15px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+        
+        }
+    </style>
+
+</head>
+
+<body onload="loaded()">
+
+    <a id="back" href="./index.html">BACK</a>
+
+    <div id="quadro">
+
+        <h1 id="h1">O SORTEADO É</h1>
+        <h2 id="h2">SORTEAR</h2>
+
+        <div  id="list_one">
+
+            <input type="text" id="i1" placeholder="01°PARTICIPANTE">
+
+            <input type="text" id="i2" placeholder="02°PARTICIPANTE">
+
+            <input type="text" id="i3" placeholder="03°PARTICIPANTE">
+
+            <input type="text" id="i4" placeholder="04°PARTICIPANTE">
+
+            <input type="text" id="i5" placeholder="05°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_two">
+
+            <input type="text" id="i6" placeholder="06°PARTICIPANTE">
+
+            <input type="text" id="i7" placeholder="07°PARTICIPANTE">
+
+            <input type="text" id="i8" placeholder="08°PARTICIPANTE">
+
+            <input type="text" id="i9" placeholder="09°PARTICIPANTE">
+
+            <input type="text" id="i10" placeholder="10°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_three">
+
+            <input type="text" id="i11" placeholder="11°PARTICIPANTE">
+
+            <input type="text" id="i12" placeholder="12°PARTICIPANTE">
+
+            <input type="text" id="i13" placeholder="13°PARTICIPANTE">
+
+            <input type="text" id="i14" placeholder="14°PARTICIPANTE">
+
+            <input type="text" id="i15" placeholder="15°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_four">
+
+            <input type="text" id="i16" placeholder="16°PARTICIPANTE">
+
+            <input type="text" id="i17" placeholder="17°PARTICIPANTE">
+
+            <input type="text" id="i18" placeholder="18°PARTICIPANTE">
+
+            <input type="text" id="i19" placeholder="19°PARTICIPANTE">
+
+            <input type="text" id="i20" placeholder="20°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_five">
+
+            <input type="text" id="i21" placeholder="21°PARTICIPANTE">
+
+            <input type="text" id="i22" placeholder="22°PARTICIPANTE">
+
+            <input type="text" id="i23" placeholder="23°PARTICIPANTE">
+
+            <input type="text" id="i24" placeholder="24°PARTICIPANTE">
+
+            <input type="text" id="i25" placeholder="25°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_six">
+
+            <input type="text" id="i26" placeholder="26°PARTICIPANTE">
+
+            <input type="text" id="i27" placeholder="27°PARTICIPANTE">
+
+            <input type="text" id="i28" placeholder="28°PARTICIPANTE">
+
+            <input type="text" id="i29" placeholder="29°PARTICIPANTE">
+
+            <input type="text" id="i30" placeholder="30°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_seven">
+
+            <input type="text" id="i31" placeholder="31°PARTICIPANTE">
+
+            <input type="text" id="i32" placeholder="32°PARTICIPANTE">
+
+            <input type="text" id="i33" placeholder="33°PARTICIPANTE">
+
+            <input type="text" id="i34" placeholder="34°PARTICIPANTE">
+
+            <input type="text" id="i35" placeholder="35°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_eight">
+
+            <input type="text" id="i36" placeholder="36°PARTICIPANTE">
+
+            <input type="text" id="i37" placeholder="37°PARTICIPANTE">
+
+            <input type="text" id="i38" placeholder="38°PARTICIPANTE">
+
+            <input type="text" id="i39" placeholder="39°PARTICIPANTE">
+
+            <input type="text" id="i40" placeholder="40°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_nine">
+
+            <input type="text" id="i41" placeholder="41°PARTICIPANTE">
+
+            <input type="text" id="i42" placeholder="42°PARTICIPANTE">
+
+            <input type="text" id="i43" placeholder="43°PARTICIPANTE">
+
+            <input type="text" id="i44" placeholder="44°PARTICIPANTE">
+
+            <input type="text" id="i45" placeholder="45°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_ten">
+
+            <input type="text" id="i46" placeholder="46°PARTICIPANTE">
+
+            <input type="text" id="i47" placeholder="47°PARTICIPANTE">
+
+            <input type="text" id="i48" placeholder="48°PARTICIPANTE">
+
+            <input type="text" id="i49" placeholder="49°PARTICIPANTE">
+
+            <input type="text" id="i50" placeholder="50°PARTICIPANTE">
+
+        </div>
+
+
+        <div  id="list_eleven">
+
+            <input type="text" id="i51" placeholder="51°PARTICIPANTE">
+
+            <input type="text" id="i52" placeholder="52°PARTICIPANTE">
+
+            <input type="text" id="i53" placeholder="53°PARTICIPANTE">
+
+            <input type="text" id="i54" placeholder="54°PARTICIPANTE">
+
+            <input type="text" id="i55" placeholder="55°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_twelve">
+
+            <input type="text" id="i56" placeholder="56°PARTICIPANTE">
+
+            <input type="text" id="i57" placeholder="57°PARTICIPANTE">
+
+            <input type="text" id="i58" placeholder="58°PARTICIPANTE">
+
+            <input type="text" id="i59" placeholder="59°PARTICIPANTE">
+
+            <input type="text" id="i60" placeholder="60°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_thirteen">
+
+            <input type="text" id="i61" placeholder="61°PARTICIPANTE">
+
+            <input type="text" id="i62" placeholder="62°PARTICIPANTE">
+
+            <input type="text" id="i63" placeholder="63°PARTICIPANTE">
+
+            <input type="text" id="i64" placeholder="64°PARTICIPANTE">
+
+            <input type="text" id="i65" placeholder="65°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_fourteen">
+
+            <input type="text" id="i66" placeholder="66°PARTICIPANTE">
+
+            <input type="text" id="i67" placeholder="67°PARTICIPANTE">
+
+            <input type="text" id="i68" placeholder="68°PARTICIPANTE">
+
+            <input type="text" id="i69" placeholder="69°PARTICIPANTE">
+
+            <input type="text" id="i70" placeholder="70°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_fifteen">
+
+            <input type="text" id="i71" placeholder="71°PARTICIPANTE">
+
+            <input type="text" id="i72" placeholder="72°PARTICIPANTE">
+
+            <input type="text" id="i73" placeholder="73°PARTICIPANTE">
+
+            <input type="text" id="i74" placeholder="74°PARTICIPANTE">
+
+            <input type="text" id="i75" placeholder="75°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_sixteen">
+
+            <input type="text" id="i76" placeholder="76°PARTICIPANTE">
+
+            <input type="text" id="i77" placeholder="77°PARTICIPANTE">
+
+            <input type="text" id="i78" placeholder="78°PARTICIPANTE">
+
+            <input type="text" id="i79" placeholder="79°PARTICIPANTE">
+
+            <input type="text" id="i80" placeholder="80°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_seventeen">
+
+            <input type="text" id="i81" placeholder="81°PARTICIPANTE">
+
+            <input type="text" id="i82" placeholder="82°PARTICIPANTE">
+
+            <input type="text" id="i83" placeholder="83°PARTICIPANTE">
+
+            <input type="text" id="i84" placeholder="84°PARTICIPANTE">
+
+            <input type="text" id="i85" placeholder="85°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_eighteen">
+
+            <input type="text" id="i86" placeholder="86°PARTICIPANTE">
+
+            <input type="text" id="i87" placeholder="87°PARTICIPANTE">
+
+            <input type="text" id="i88" placeholder="88°PARTICIPANTE">
+
+            <input type="text" id="i89" placeholder="89°PARTICIPANTE">
+
+            <input type="text" id="i90" placeholder="90°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_nineteen">
+
+            <input type="text" id="i91" placeholder="91°PARTICIPANTE">
+
+            <input type="text" id="i92" placeholder="92°PARTICIPANTE">
+
+            <input type="text" id="i93" placeholder="93°PARTICIPANTE">
+
+            <input type="text" id="i94" placeholder="94°PARTICIPANTE">
+
+            <input type="text" id="i95" placeholder="95°PARTICIPANTE">
+
+        </div>
+
+        <div  id="list_twenty">
+
+            <input type="text" id="i96" placeholder="96°PARTICIPANTE">
+
+            <input type="text" id="i97" placeholder="97°PARTICIPANTE">
+
+            <input type="text" id="i98" placeholder="98°PARTICIPANTE">
+
+            <input type="text" id="i99" placeholder="99°PARTICIPANTE">
+
+            <input type="text" id="i100" placeholder="100°PARTICIPANTE">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./luck.png" type="image/png">
+    <title>Sorteio</title>
+
+    <script>
+
+        function loaded() {
+
+            // CÓDIGO PARA ESTILIZAÇÃO
+
+            const borderStyle = function (x) {
+
+                return {
+                    this: x,
+                    onMouseOn: function (y) {
+                        return this.style.backgroundColor = "#B9B7BD"
+                    },
+                    onMouseClose: function (y) {
+                        return this.style.backgroundColor = "#EBE7D0"
+                    },
+                    borderBottomOn: function (y) {
+                        return this.style.borderColor = "#EBE7D0"
+                    },
+                    borderBottomOff: function (y) {
+                        return this.style.borderColor = "#32CD30"
+                    }
+                }
+            }
+
+            let a = [borderStyle(this)]
+            let p = a[0]
+
+
+            let back = document.getElementById("back")
+            back.onmouseover = p.borderBottomOn
+            back.onmouseout = p.borderBottomOff
+
+            let h2 = document.getElementById("h2")
+            h2.onmouseover = p.borderBottomOn
+            h2.onmouseout = p.borderBottomOff
+
+            let input1 = document.getElementById("i1")
+            input1.onmouseover = p.onMouseOn
+            input1.onmouseout = p.onMouseClose
+
+            let input2 = document.getElementById("i2")
+            input2.onmouseover = p.onMouseOn
+            input2.onmouseout = p.onMouseClose
+
+            let input3 = document.getElementById("i3")
+            input3.onmouseover = p.onMouseOn
+            input3.onmouseout = p.onMouseClose
+
+            let input4 = document.getElementById("i4")
+            input4.onmouseover = p.onMouseOn
+            input4.onmouseout = p.onMouseClose
+
+            let input5 = document.getElementById("i5")
+            input5.onmouseover = p.onMouseOn
+            input5.onmouseout = p.onMouseClose
+
+            let input6 = document.getElementById("i6")
+            input6.onmouseover = p.onMouseOn
+            input6.onmouseout = p.onMouseClose
+
+            let input7 = document.getElementById("i7")
+            input7.onmouseover = p.onMouseOn
+            input7.onmouseout = p.onMouseClose
+
+            let input8 = document.getElementById("i8")
+            input8.onmouseover = p.onMouseOn
+            input8.onmouseout = p.onMouseClose
+
+            let input9 = document.getElementById("i9")
+            input9.onmouseover = p.onMouseOn
+            input9.onmouseout = p.onMouseClose
+
+            let input10 = document.getElementById("i10")
+            input10.onmouseover = p.onMouseOn
+            input10.onmouseout = p.onMouseClose
+
+
+            // FUNÇÃO PRINCIPAL, RESPONSÁVEL PELA ATRIBUIÇÃO DE VALORES INSERIDOS NOS INPUT PELO USUÁRIO.
+
+            function principal(x) {
+                return x.value
+            }
+
+            // FUNÇÃO PARA O SORTEIO
+
+            function sorteio() {
+
+                let i1 = document.getElementById("i1")
+                let n1 = principal(i1)
+
+                let i2 = document.getElementById("i2")
+                let n2 = principal(i2)
+
+                let i3 = document.getElementById("i3")
+                let n3 = principal(i3)
+
+                let i4 = document.getElementById("i4")
+                let n4 = principal(i4)
+
+                let i5 = document.getElementById("i5")
+                let n5 = principal(i5)
+
+                let i6 = document.getElementById("i6")
+                let n6 = principal(i6)
+
+                let i7 = document.getElementById("i7")
+                let n7 = principal(i7)
+
+                let i8 = document.getElementById("i8")
+                let n8 = principal(i8)
+
+                let i9 = document.getElementById("i9")
+                let n9 = principal(i9)
+
+                let i10 = document.getElementById("i10")
+                let n10 = principal(i10)
+
+                var person = [n1, n2, n3, n4, n5, n6, n7, n8, n9, n10]
+
+                let people = person.length
+                let rational = Math.floor(Math.random() * people)
+                let sorteado = person[rational]
+
+
+                let h1 = document.getElementById("h1")
+                h1.innerHTML = sorteado
+
+            }
+
+            function play() {
+
+                setTimeout(sorteio, 3000)
+
+            }
+
+            h2.onclick = play
+        }
+    </script>
+
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        body {
+            background-color: #212223;
+        }
+
+        #quadro {
+            position: relative;
+            background-color: #121110;
+            max-width: 1050px;
+            height: 490px;
+
+            margin: auto;
+            padding: 30px;
+            margin-top: 40px;
+
+            border: 5px solid #32CD30;
+            border-radius: 70px;
+        }
+
+        #h1 {
+            position: absolute;
+            text-align: center;
+            color: #EBE7D0;
+            font-family: 'Press Start 2P';
+            font-size: 40px;
+            margin-left: 27%;
+            margin-top: 20px;
+        }
+
+        #h2 {
+
+            position: absolute;
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 35%;
+            padding: 15px;
+
+            color: #EBE7D0;
+            font-family: 'Press Start 2P';
+            font-size: 30px;
+            background-color: #32CD30;
+            border: 5px solid #32CD30;
+            border-radius: 35px;
+            cursor: pointer;
+
+        }
+
+        #h2:active {
+            background: #EBE7D0;
+            color: #32CD30;
+        }
+
+        #back {
+            position: absolute;
+            color: #EBE7D0;
+            font-family: 'Press Start 2P';
+            padding: 8px;
+            font-size: 20px;
+            margin-left: 15px;
+
+            text-decoration: none;
+            background-color: #121110;
+            border: 5px solid #32CD30;
+            border-radius: 35px;
+            cursor: pointer;
+        }
+
+        #back:hover {
+            color: #32CD30;
+        }
+
+        #list_one {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 225px;
+            margin-left: 180px;
+        }
+
+        #list_two {
+            position: absolute;
+            max-width: 300px;
+            margin-top: 225px;
+            margin-left: 550px;
+        }
+
+        input {
+            box-sizing: border-box;
+
+            color: #121110;
+            background: #EBE7D0;
+            font-family: 'Press Start 2P';
+            text-align: center;
+            font-weight: bold;
+            font-size: 13px;
+            
+            padding: 12px;
+            padding-right: 0;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            outline-color: #32CD30;
+        }
+
+        /*RESPONSIVIDADE MOBILE*/
+
+        @media screen and (max-width: 1280px) {/*NEST HUB MAX*/
+            
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 850px;
+                height: 600px;
+                
+                margin: auto;
+                margin-top: 50px;
+                padding: 30px;
+               
+                border: 15px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 3.5vw;
+                
+                margin-left: 18%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 33%;
+                padding: 15px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 30px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 15px;
+                font-size: 1.8vw;
+                margin-left: 15px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 10px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 100px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 460px;
+            }
+
+            input {
+                width: 300px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4vw;
+                
+                padding: 12px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+
+        }
+
+        @media screen and (max-width: 1024px) {/*NEST HUB*/
+
+                        
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 650px;
+                height: 600px;
+                
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 30px;
+               
+                border: 15px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 3.5vw;
+                
+                margin-left: 15%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 28%;
+                padding: 15px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 30px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 15px;
+                font-size: 1.8vw;
+                margin-left: 15px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 10px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 50px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 360px;
+            }
+
+            input {
+                width: 250px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4vw;
+                
+                padding: 12px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+
+        }
+        @media screen and (max-width: 912px) {
+            /*SURFACE PRO 7*/
+
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 580px;
+                height: 600px;
+
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 30px;
+
+                border: 15px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 3.5vw;
+
+                margin-left: 15%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 28%;
+                padding: 15px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 30px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 12px;
+                font-size: 1.5vw;
+                margin-left: 15px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 10px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 50px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 320px;
+            }
+
+            input {
+                width: 220px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4vw;
+
+                padding: 12px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+        }
+        @media screen and (max-width: 820px) {/*iPad AIR*/
+            
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 500px;
+                height: 650px;
+
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 30px;
+
+                border: 15px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 3.5vw;
+
+                margin-left: 15%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 25%;
+                padding: 15px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 30px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 12px;
+                font-size: 1.5vw;
+                margin-left: 15px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 10px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 30px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 290px;
+            }
+
+            input {
+                width: 200px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4vw;
+
+                padding: 12px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+        }
+        @media screen and (max-width: 540px) {/*SURFACE DUO*/
+            
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 320px;
+                height: 550px;
+
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 30px;
+
+                border: 15px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 4.5vw;
+
+                margin-left: 4%;
+                margin-top: 20px;
+            }
+
+            #h2 {
+                position: absolute;
+                text-align: center;
+                margin-top: 100px;
+                margin-left: 16%;
+                padding: 10px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 25px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 10px;
+                font-size: 1.5vw;
+                margin-left: 10px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 0px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 300px;
+                margin-top: 270px;
+                margin-left: 180px;
+            }
+
+            input {
+                width: 150px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.5vw;
+
+                padding: 10px;
+                margin-bottom: 18px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+        
+        }
+        @media screen and (max-width: 414px) {
+            /*IPHONE XR*/
+
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 320px;
+                width: 260px;
+                height: 400px;
+
+                margin: auto;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                padding: 30px;
+
+                border: 8px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 4.8vw;
+
+                margin-left: -65px;
+                margin-top: 20px;
+            }
+
+            #h2 {
+                position: absolute;
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 15%;
+                padding: 12px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 20px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 6px;
+                font-size: 1.5vw;
+                margin-left: 8px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 200px;
+                margin-left: 10px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 200px;
+                margin-left: 150px;
+            }
+
+            input {
+                width: 110px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.5vw;
+
+                padding: 6px;
+                margin-bottom: 15px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+
+        }
+        @media screen and (max-width: 390px) { /*IPHONE 12 PRO*/
+            * {
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body {
+                background-color: #212223;
+            }
+
+            #quadro {
+                position: relative;
+                background-color: #121110;
+                max-width: 320px;
+                width: 250px;
+                height: 400px;
+
+                margin: auto;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                padding: 30px;
+
+                border: 6px solid #32CD30;
+                border-radius: 70px;
+            }
+
+            #h1 {
+                position: absolute;
+                text-align: center;
+                max-width: 1000px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 4.8vw;
+
+                margin-left: -70px;
+                margin-top: 20px;
+            }
+
+            #h2 {
+                position: absolute;
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 12%;
+                padding: 12px;
+
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                font-size: 20px;
+                background-color: #32CD30;
+                border: 5px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #h2:active {
+                background: #EBE7D0;
+                color: #32CD30;
+            }
+
+            #back {
+                position: absolute;
+                color: #EBE7D0;
+                font-family: 'Press Start 2P';
+                padding: 5px;
+                font-size: 1.5vw;
+                margin-left: 8px;
+
+                text-decoration: none;
+                background-color: #121110;
+                border: 3px solid #32CD30;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            #back:hover {
+                color: #32CD30;
+            }
+
+            #list_one {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 200px;
+                margin-left: 8px;
+            }
+
+            #list_two {
+                position: absolute;
+                max-width: 50px;
+                margin-top: 200px;
+                margin-left: 140px;
+            }
+
+            input {
+                width: 110px;
+                box-sizing: border-box;
+
+                color: #121110;
+                background: #EBE7D0;
+                font-family: 'Press Start 2P';
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.5vw;
+
+                padding: 6px;
+                margin-bottom: 15px;
+                border-radius: 30px;
+                outline-color: #32CD30;
+            }
+        
+        }
+    </style>
+
+</head>
+
+<body onload="loaded()">
+
+    <a id="back" href="./index.html">BACK</a>
+
+    <div id="quadro">
+
+        <h1 id="h1">O SORTEADO É</h1>
+        <h2 id="h2">SORTEAR</h2>
+
+        <div id="list_one">
+
+            <input type="text" id="i1" placeholder="01°PARTICIPANTE">
+
+            <input type="text" id="i2" placeholder="02°PARTICIPANTE">
+
+            <input type="text" id="i3" placeholder="03°PARTICIPANTE">
+
+            <input type="text" id="i4" placeholder="04°PARTICIPANTE">
+
+            <input type="text" id="i5" placeholder="05°PARTICIPANTE">
+
+        </div>
+
+        <div id="list_two">
+
+            <input type="text" id="i6" placeholder="06°PARTICIPANTE">
+
+            <input type="text" id="i7" placeholder="07°PARTICIPANTE">
+
+            <input type="text" id="i8" placeholder="08°PARTICIPANTE">
+
+            <input type="text" id="i9" placeholder="09°PARTICIPANTE">
+
+            <input type="text" id="i10" placeholder="10°PARTICIPANTE">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
